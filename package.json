@@ -1,0 +1,22 @@
+{
+  "name": "tut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tut64.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ParthPatel133/tut.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ParthPatel133/tut/issues"
+  },
+  "homepage": "https://github.com/ParthPatel133/tut#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

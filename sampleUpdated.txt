@@ -1,0 +1,1 @@
+this is a edited text file to read data.
