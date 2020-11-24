@@ -3,29 +3,21 @@ const path = require('path');
 const app = express();
 const port = 80;
 
-//for serving static files
-app.use('/static', express.static('static')) //here static is folder name
+//EXPRESS SPECIFIC CONFIG
+app.use('/static', express.static('static')) //static is folder name (for serving static files)
 
-//set the template engine as pug
-app.set('view engine', 'pug')
+//PUG SPECIFIC CONFIG
+app.set('view engine', 'pug') //set the template engine as pug
+app.set('views', path.join(__dirname, 'views')) //set the views directory
 
-//set the views directory
-app.set('views', path.join(__dirname, 'views'))
-
-//pug demo end point
-app.get('/demo', (req, res) => {
-    res.status(200).render('demo', { title: 'pug demo', message: 'sample text for using pug' })
+//ENDPOINTS
+app.get('/', (req, res) => {
+    const head = 'Heading of pug';
+    const params = { 'title': 'title of pug', 'heading': head }
+    res.status(200).render('index.pug', params)
 })
 
-app.get("/", (req, res) => {
-    res.status(200).send('this is homepage')
-})
-
-
-app.post("/about", (req, res) => {
-    res.status(200).send('this is about post request')
-})
-
+//START THE SERVER
 app.listen(port, () => {
     console.log(`app started on port ${port}`)
 })
