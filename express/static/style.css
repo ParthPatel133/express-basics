@@ -2,9 +2,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  font-weight: 700;
-  background-color: orange;
+nav {
+  background-color: grey;
+  padding: 12px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  list-style: none;
+  padding: 4px 17px;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
